@@ -168,7 +168,7 @@ SELECT * FROM book_details;
 
 
 
-Contraints
+Constraints
 ----------
 - controls the data that you add to the table
 - can be added in 3 ways
@@ -203,7 +203,7 @@ ALTER TABLE book_details ALTER COLUMN book_cost SET NOT NULL;
 
 
 Primary Key
-	- every table should have a primary key column/contraint
+	- every table should have a primary key column/constraint
 	- a column declared with primary key contraint by default is UNIQUE and NOT NULL
 	- the primary key column is automatically indexed
 
@@ -424,13 +424,13 @@ subqueries
 		SELECT * FROM book_details WHERE book_cost>35;
 	-write to query to display the details of books whose cost is greater than the average book cost
 		SELECT * FROM book_details WHERE book_cost>(SELECT avg(book_cost) FROM book_details);
-	-if your select query has to twork on an unknown/ computed value we can write a subquery to compute the unknown value and then the outter / main query works on computed value
-	- we further nest the sub query with another sub query
+	-if your select query has to work on an unknown/ computed value we can write a subquery to compute the unknown value and then the outter / main query works on computed value
+	- we can further nest the sub query with another sub query
 	- we also have correlated subquery
 
 joins
 ------
-- if we have fetch data from 2 or more tables we use joins
+- if we have to fetch data from 2 or more tables we use joins
 
 department_details
 	dept_id(PK)
@@ -469,4 +469,151 @@ type of joins
 - CROSS JOIN
 - FULL OUTTER JOIN
 - NATURAL JOIN
+
+
+
+Set operations in sql
+---------------------
+1) UNION
+The UNION operator combines result sets of two or more SELECT statements into a single result set.
+
+2) UNION ALL
+
+
+3) INTERSECT
+
+conditions
+----------
+To combine the result sets of two queries using the UNION operator, the queries must conform to the following rules:
+
+The number and the order of the columns in the select list of both queries must be the same.
+The data types must be compatible.
+
+
+A(2,5,3)
+B(1,5)
+
+A Union B (A U B) = (1,2,3,5)
+A Union all B = (1,2,3,5,5)
+A Intersect B = (5)
+
+Views
+------
+	- https://www.postgresql.org/docs/9.2/sql-createview.html
+
+	SELECT emp_id, emp_name, dept_name FROM employee_details INNER JOIN department_details ON employee_details.emp_dept_id=department_details.dept_id;
+
+	CREATE VIEW employee_department_view AS SELECT emp_id, emp_name, dept_name FROM employee_details INNER JOIN department_details ON employee_details.emp_dept_id=department_details.dept_id;
+
+	SELECT * FROM employee_department_view;
+
+	further to explore
+	-----------------
+	- can I add a where clause when I select froma  view?
+	- can I execute a delete/insert/update query on the view?
+	- can I use a view in a subquery?
+	- can I use a view in a join query?
+	
+Normalization
+-------------
+references
+----------
+	- https://www.javatpoint.com/dbms-normalization#:~:text=Following%20are%20the%20various%20types%20of%20Normal%20forms%3A&text=A%20relation%20is%20in%201NF,and%20no%20transition%20dependency%20exists.
+	- https://www.softwaretestinghelp.com/database-normalization-tutorial/
+
+1NF
+
+2NF
+
+3NF
+
+4NF - not required
+
+5NF - not required
+
+
+
+stud_id		stud_name    course_name
+------------------------------------
+100		ABC		Math, Science, English
+101		XYZ		Math, English
+102		LMN		English, Science
+103				Math
+
+student_details
+-------------
+	stud_id
+	stud_name
+	course_name
+
+stud_id determines stud_name, in other words stud_name is functionaly dependent on stud_id
+does stud_id determine course_name? No. in other words course_name is not functionally dependent on stud_id
+so now student_Details is not in 2NF
+
+	- remove the non-functionally dependent column and keep in a sepreate table and introduce foreign keys
+
+student_details
+----------------
+	stud_id(PK)
+	stud_name
+	course_id(FK)
+
+course_details
+---------------
+	course_id(PK)
+	course_name
+
+100	ABC Math
+100 	ABC Science
+100	ABC English
+101	XYZ Math
+101 	XYZ English
+102	LMN English
+102 	LMN Science
+
+Transactions
+-------------
+
+money transfer - transaction
+
+executing 2 update queries
+
+UPDATE account_details SET acc_balance=acc_balance-500 WHERE acc_number=101;  // debiting USD 500 from 101
+
+	// lets say the DB server crashed
+UPDATE account_details SET acc_balance=acc_balance+500 WHERE acc_number=105; // crediting USD 500 to 105
+
+rule of a transactoin
+	- all the queries in the transaction execute otherwise none should execute		
+	- if all the queries in the transaction, the transaction was successfull
+	- if none of the queries i would say the transction failed
+	- but in either case i have consistent/correct data in the table
+	
+
+3 keywords in transaction
+-------------------------
+begin transaction
+	when we begin the transaction the auto commit is set to false
+comit
+	when we say commit the queries that were executed after the transaction has begun, will the chages permanent in the tables
+	it marks the end of the transaction
+	if a commit has reached, means the transaction was successfull
+	the database reached a new state of consistency
+rollback
+	when we say rollback all the queries that were executed after the transaction has begun will revert
+	it marks the end of the transaction
+	if a rollback reached, means it is a failed transaction
+	the database remains in the old state of consistency
+savepoints
+	can create multiple savepoints within a trasaction
+
+ACID Properties - interview question
+--------------
+Atomicity
+Consistency
+Isolation
+Durability
+
+reference
+	- https://www.geeksforgeeks.org/acid-properties-in-dbms/
 
