@@ -240,9 +240,9 @@ a question to think about - Can I use abstract and final in front of a class?	no
 
 	questions
 	---------
-	1) can a static method access a non static member?
+	1) within a class can a static method access a non static member?
 		no 
-	2) can a non-static method access a static member?
+	2) within a class can a non-static method access a static member?
 		yes
 
 

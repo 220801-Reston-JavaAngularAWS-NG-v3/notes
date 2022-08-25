@@ -1,0 +1,66 @@
+collections
+------------
+	- hold objects(data)	
+	- arrays also hold data 
+	
+this is what we have to learn in collections
+--------------------------------------------
+	- know how to perform the CRUD opertation on the collections
+	- know the similarities among the various collections
+	- know the differences among the various collections
+
+array vs collection
+-------------------
+array
+	- we can create an array of objects and primitive types
+	- once an array is created we specify the size of the array and this size is fixed
+	- eg use case : seats of a movie theatre where we know the maximum occupation of seats would be 100
+		int[] seatNo = new int[100];
+collection
+	- a collection can only hold objects, it does not hold primitive types
+	- a collection size, it grows as you add objects and it shrinks as you remove objects
+	- use case : registration for an open workshop where we are not sure of how many people would register
+
+collection heirarchy - interview question
+--------------------
+reference image
+
+ - https://i0.wp.com/javaconceptoftheday.com/wp-content/uploads/2014/11/CollectionHierarchy.png?w=1300
+
+List
+-----
+	- a list is indexed, we can access the objects of a list implementation by specifying the index
+	- a list is ordered, which means it maintains the order of the objects at the time it was added
+	- can add duplicate objects to a list implementation
+	- can add multiple null values in a list implementation
+
+Set
+---
+	- a set is not indexed, so we cannot access the objects using any index 
+	- a set maintains random order of the object added to it
+	- a set does not hold duplicate values
+	- can add one null value to a set implementation
+
+
+Queue
+-----
+	- follows FIFO (First In First Out)
+	- add objects to the rear and remove object from the front
+
+
+SortedSet
+--------
+	- has all the features of Set plus extra
+	- just like a Set implementation, SortedSet implementation does not hold duplicate values ( it is obvious because SortedSet extends Set)
+	- any object that you add to a SortedSet implementation should implement Comparable Interface
+
+
+Comparable interface vs Comparator interface
+--------------------------------------------
+	- strong interview question
+	- know the difference between the 2 interfaces and when to go for Comparable and when to go for Comparator
+
+
+Map
+---
+	- stores a key/value pair
