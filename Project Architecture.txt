@@ -49,3 +49,14 @@ POJO - Plain Old Java Object
      - a POJO is not a layer of your project
      - it is more like a data holder/encapsulator
 
+Exception Handling flow for the project
+---------------------------------------
+1. Any exceptions that may occur in the any of the layers of the project should be probagated all the way to the presentation layer and handled in the Presentation Layer
+2. any sql related exception that occurs in the dao layer should be rethrown as a custom exception (ApplicationException)
+
+Logging in project - we will use logback framework
+----------------------------------------------------
+
+
+Unit testing in the project - we will use JUnit 5
+-------------------------------------------------
