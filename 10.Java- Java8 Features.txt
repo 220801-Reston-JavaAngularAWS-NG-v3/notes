@@ -18,3 +18,24 @@ Java Time API
 Collection API improvements
 Concurrency API improvements
 Java IO improvements
+
+default and static methods in Interfaces
+----------------------------------------
+	- prior to Java 1.8 , interfaces can have only abstract methods
+	- from 1.8 version java interfaces had default(methods with body definition) methods and static(static methods with body definition) methods, along with the abstract methods.
+
+Functional Interfaces and Lambda Expressions
+---------------------------------------------
+Functional Interface
+	- it has exactly one abstract method ( can have any number of default and static methods)
+	- we used to call interfaces with one abstract method as SAM(Single Abstract Method) interfaces
+	- Eg: java.lang.Comparable , java.lang.Runnable and many more
+	- we can use the annotation @FuntionalInterface above a functional interface to make sure that it is a functional interface
+
+if we have a functional interface, how do i implement the functional interface?
+
+3 ways
+------
+	- conventional way
+	- anonymous classes
+	- lambda expressions
