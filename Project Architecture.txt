@@ -42,7 +42,7 @@ presentation -> service -> Dao ->Database
 coupling
 --------
 loosely coupled project - we want to have this in the project
-tightly coupled project
+tightly coupled project - we dont want this
 
 POJO - Plain Old Java Object
      - carry the data to and fro from one layer to another
@@ -56,7 +56,15 @@ Exception Handling flow for the project
 
 Logging in project - we will use logback framework
 ----------------------------------------------------
-
+	 - implemented in the book-management-system project
+	 - 3 steps
+		- add the dependency in the pom.xml file
+		- add the logback.xml configuration file in the sr/main/resources folder
+		- Use the Logger in the code
 
 Unit testing in the project - we will use JUnit 5
 -------------------------------------------------
+	- we will test only the service layer
+	- we know the service layer is dependent on the dao (because the service layer calls the dao layer)
+	- so we will mock the call to the dao layer using mockito
+
