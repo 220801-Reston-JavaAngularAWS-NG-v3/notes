@@ -1,0 +1,58 @@
+web server
+	- tomcat, weblogic, jboss - different avaliable web servers
+web client
+	- the browser
+		- protocol, ipaddress, port number, credentials
+
+web application - we can host/deploy a web application into a web server
+		- a collection of web pages
+		
+web pages
+	 2 types
+	---------
+	- static web page
+		- the contents of the page do not change at the server side
+
+	- dynamic web page
+		- the contents of the page change at the server side
+
+contents of the page
+-------------------
+	- can be changed at server side
+		- how do we do this? - Servlets , JSP(Java Server Pages)
+
+	- can be changed at client side
+		- how do we do this? - Javascript
+
+what do i need to know to create a web page?
+-------------------------------------------
+
+	- HTML - Hyper Text Markup Language [ CSS(styling), Javascript ] - static web page
+	- Servlets, JSP - dynamic web pages
+
+Steps
+------
+1) Create a dynamic web project in eclipse
+	3 things
+		- specify the name of the project
+		- choose the web module version depending on the version of tomcat installed
+		- choose web.xml file to be included(optional)
+2) Right cick on the project and create a new servlet
+	- this servlet extends HttpServlet
+3) you will see a lot of red crosses
+	- to fix this copy the servlet-api.jar file ( avaliable in the lib folder of tomcat) into the lib folder(which is inside WEB-INF folder) of your project in eclipse
+
+4) Finish the code inside the servlet
+
+5) deploy the web application in tomcat server
+
+6) start the tomcat server
+
+7) open a browser and place a request for the servlet that we just created
+	
+Step 5, 6, 7 can be done by the steps mentioned below
+
+	- configure a server(tomcat) in eclipse (one time work)
+	- right click on the servlet and Run as --> on server ( do it every time when you want to run the servlet)
+
+
