@@ -55,4 +55,21 @@ Step 5, 6, 7 can be done by the steps mentioned below
 	- configure a server(tomcat) in eclipse (one time work)
 	- right click on the servlet and Run as --> on server ( do it every time when you want to run the servlet)
 
+get request and post request
 
+	https://codeburst.io/know-your-http-status-a-cheat-sheet-for-http-status-codes-5fb43863e589
+
+
+Http is a stateless protocol
+
+Session Management
+------------------
+	- URL rewriting
+	- Hidden form fields
+	- HttpCookies
+	- HttpSession
+
+
+
+
+JWT - Json Web Token
