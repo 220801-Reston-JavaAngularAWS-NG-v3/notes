@@ -1,0 +1,27 @@
+Spring core
+-----------
+	- IOC (Inversion of Control)
+	- DI (Dependency Injection)
+  bean scopes 
+  bean lifecycle
+
+Configuration ways
+------------------
+	- xml(file) based configuration
+	- annotation based configuration
+	- java based configuration
+
+dependency injections
+---------------------
+	- constructor based injection
+	- setter based injection
+	- field based injection
+
+Annotations used
+-----------------
+@Component
+	stereotype annotations
+		@Service, @Repository, @Controller
+
+@Value
+@Autowired
