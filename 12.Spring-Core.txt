@@ -25,3 +25,83 @@ Annotations used
 
 @Value
 @Autowired
+
+things to learn in spring
+--------------------------
+Spring core
+Spring REST - Spring MVC
+
+rest endpoints/urls
+	http://localhost:7070/book-project/books - this rest url/endpoint will fetch all the books
+	http://localhost:7070/book-project/books/101 - this rest url/endpoint will fetch a book with id 101 
+
+
+exposing endpoints
+
+consuming endpoints
+
+
+frontend appln consumes an endpoint --------> backend appln exposes an endpoint
+
+backend apln consuming an other endpoint
+
+Spring boot - RAD(Rapid Application Development) tool
+
+without spring boot
+--------------------
+1) create a maven project
+2) add the maven dependency - huge list to your pom.xml
+3) get the configuration files ready
+4) configure the tomcat server 
+5) start coding
+6) run the application
+
+with spring boot
+----------------
+1) create a spring boot maven project
+2) add one maven dependency which adds all the related dependencies
+2) start coding
+3) run the application
+
+how to create a spring boot project
+-----------------------------------
+	1) if you have STS (Spring Tool Suite), you can create a spring boot project in STS directly
+	2) if you have the normal eclipse, use the spring intializr website to create the sping boot project , download it and import it into eclipse
+
+
+
+
+Spring Data
+Spring AOP
+lombok
+validation
+transaction
+
+
+design pattern - MVC
+	Model - a java opbject that holds data (POJOS)
+	View - presentation layer
+	Controller - controllers the flow - Servlets
+
+
+
+----------------------------------------
+interview topics
+
+basics - have to be very strong
+-------------------------------
+SDLC 
+Java
+Java - OOPS very very important
+SQL - Joins, subquery, select clauses - where, group by, having, order by
+
+advanced
+--------
+Spring
+ORM
+Angular
+
+devops and cloud(AWS) - let me check with the team
+
+Microservices
+-----------------------------------------------
