@@ -34,14 +34,16 @@ make sure naming conventions and coding conventions are followed
 
 Back-end Application
 ---------------------
-1) controller layer - Rest endpoints using spring REST
-2) service layer
-3) Dao layer - using Spring Data JPA
-4) Junit 5 - test the service layer
-5) Mockito - mock the DAO layer while testing service layer
-6) Global exception handler
-7) Logback - logging done using this framework
-8) AOP - to weave logging in each method
+1) use spring boot project with maven
+2) controller layer - Rest endpoints using spring REST
+3) service layer
+4) Dao layer - using Spring Data JPA
+5) Junit 5 - test the service layer
+6) Mockito - mock the DAO layer while testing service layer
+7) Spring validation
+8) Global exception handler
+9) Logback - logging done using this framework in a log file
+8) Spring AOP - to weave logging in each method
 9) lombok - for easy pojo and entity creation
 10) Keep the dbscript.sql file with the project
 
@@ -57,9 +59,10 @@ Database
 2) follow naming conventions for table name and column names - follow a pattern
 3) apply the necessary constraints - Primary key, Foreign key, not null, unique etc
 
-Devops - 
+Devops  
 ------
 1) Git - mandatory for Project 2 and Project 3
 2) Maven - mandatory for Project 2 and Project 3
-3) Docker 
-4) Deployment of full stack project in cloud
+3) Jenkins
+4) Docker 
+5) Deployment of full stack project in cloud
