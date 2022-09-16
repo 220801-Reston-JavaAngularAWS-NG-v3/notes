@@ -1,0 +1,65 @@
+Project 2 details
+------------------
+
+
+list of dependecnies to be added to the spring boot project
+---------------------------------------------------------------
+
+Book Management System - Backend
+
+Spring Rest - spring web
+postgres driver - have to this dependencycy
+junit 5 - not required as spring-boot-starter-test is already added to pom.xml
+mockito - not required as spring-boot-starter-test is already added to pom.xml
+logback - not required as spring-boot-starter-web already has this dependency
+lombok - to generate the getters and setters, constructors through lombok annotations
+spring-dev-tools (optional) 
+
+spring data - will implement later once we finish orm / will not add these dependencies now
+aop - will implement later / will not add these dependencies now
+
+5 endpoints
+------------
+getAllBooks - Read - get request
+getABook - Read - get request
+addBook - Create - post request
+updateBook - Update - put request
+deleteBook - Delete - delete request
+
+checklist of things to be incorporated in project 2
+---------------------------------------------------
+clean the code
+format the code
+make sure naming conventions and coding conventions are followed 
+
+Back-end Application
+---------------------
+1) controller layer - Rest endpoints using spring REST
+2) service layer
+3) Dao layer - using Spring Data JPA
+4) Junit 5 - test the service layer
+5) Mockito - mock the DAO layer while testing service layer
+6) Global exception handler
+7) Logback - logging done using this framework
+8) AOP - to weave logging in each method
+9) lombok - for easy pojo and entity creation
+10) Keep the dbscript.sql file with the project
+
+Front-end Application
+----------------------
+1)
+2)
+3)
+
+Database
+--------
+1) Have a schema diagram 
+2) follow naming conventions for table name and column names - follow a pattern
+3) apply the necessary constraints - Primary key, Foreign key, not null, unique etc
+
+Devops - 
+------
+1) Git - mandatory for Project 2 and Project 3
+2) Maven - mandatory for Project 2 and Project 3
+3) Docker 
+4) Deployment of full stack project in cloud

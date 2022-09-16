@@ -28,13 +28,14 @@ Annotations used
 
 things to learn in spring
 --------------------------
-Spring core
-Spring REST - Spring MVC
+1) Spring core
+2) Spring REST - Spring MVC
 
 rest endpoints/urls
 	http://localhost:7070/book-project/books - this rest url/endpoint will fetch all the books
 	http://localhost:7070/book-project/books/101 - this rest url/endpoint will fetch a book with id 101 
 
+use postman to test the rest endpoints
 
 exposing endpoints
 
@@ -45,7 +46,7 @@ frontend appln consumes an endpoint --------> backend appln exposes an endpoint
 
 backend apln consuming an other endpoint
 
-Spring boot - RAD(Rapid Application Development) tool
+3) Spring boot - RAD(Rapid Application Development) tool
 
 without spring boot
 --------------------
@@ -68,14 +69,11 @@ how to create a spring boot project
 	1) if you have STS (Spring Tool Suite), you can create a spring boot project in STS directly
 	2) if you have the normal eclipse, use the spring intializr website to create the sping boot project , download it and import it into eclipse
 
-
-
-
-Spring Data
-Spring AOP
-lombok
-validation
-transaction
+4) Spring Data
+5) Spring AOP
+6) lombok
+7) validation
+8) transaction
 
 
 design pattern - MVC
@@ -105,3 +103,4 @@ devops and cloud(AWS) - let me check with the team
 
 Microservices
 -----------------------------------------------
+
