@@ -1,0 +1,78 @@
+Angular - Framework for the front end application
+	- we can manipulate the DOM using angular
+	- angular uses typscript
+	- typscript is a super set of java script which means typescript = javascript + extra(strongly typed language, functions can have a return type)
+	- browsedr does not understand typscript
+	- the typscript has to transpiled to javascript, this happens when we build the project
+
+	- with angular we are creating SPA(Single Page Application)
+	- versions
+		- angularjs
+		- but then angular was completely revamped and then came angular 2+
+		- we are not learning angularjs, we are learning angular2+
+
+to install angular, we need npm(node package manager)
+we can get the npm by installing nodejs
+
+angular installation
+--------------------
+1) download and install node js
+2) verify node and npm version in command prompt/terminal
+	node --version
+	npm --version
+3) install angular using npm in command prompt/terminal, -g says that we are installing it globally
+	npm install -g @angular/cli
+4) verify angular/cli version in command prompt/terminal
+	ng version
+
+the IDE used here is VSCode, make sure VSCode is installed
+
+creating angular project and opening it in VSCode
+--------------------------------------------------
+1) we create the angular project outside VSCode, i.e in the terminal
+2) create an angular project in a new folder, use the command
+	ng new <angular project name>
+3) move into the angular project folder
+	cd <angular project name>
+4) open the folder in VSCode ( can do this in other ways as well)
+	code .
+5) start the angular live development server
+	ng serve
+
+
+Creating a component
+--------------------
+every component has 4 files
+----------------------------
+display.component.ts
+display.component.html
+display.component.css
+display.component.spec.ts
+
+steps
+------
+1) create the files
+	2 ways to do this
+		a) manually create all the necessary  files for the component
+
+		b) use the command 
+			ng generate component display (or)
+			ng g c display
+
+2) make an entry of the component in the app.module.ts file
+	if we use the 2nd way of creating the files this is not required as it is automatically entered in the app.module.ts
+3) use the selector of the newly created component
+
+
+
+string interpolation - {{ }}
+event binding - ()
+property binding 
+	- one way property binding [], {{ }}	
+	- two way property binding - ngModel
+
+
+
+
+	
+	
