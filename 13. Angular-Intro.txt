@@ -80,6 +80,70 @@ to install the node modules folder of the project
 3) run the command
 	npm install
 
+angular routing
+---------------
+steps
+-----
+1) we have to configure a route path for the components. This is done app-routing.module.ts
+2) specify the <router-outlet></router-outlet> where you would want the routing to take place
+3) navigate to the component - 3 ways
+	a) use the route path in the url - we dont do this in projects
+	b) use <a> with routerLink ( do not use href attribute as this will reload the page again from server and it destroys the purpose of SPA)
+	c) Router api
+	
+
+Structural changes
+-------------------
+1) making sure that all variables are declared with datatypes
+
+	allName: string[] = ["ABC", "LMN", "ASD"];
+	mark: number = 50;
+	myName: string = "hello";
+
+2) introducing services in angular
+
+Angular Forms
+-------------
+we can work with 2 types of forms	
+	1. Template Driven Forms - used in session 
+	2. Reactive Forms - self exploration
+
+form validation
+----------------
+basic form validations
+	required
+	minlength
+	maxlength
+	size
+
+template variables in template
+
+FormControl
+
+
+Route Guards
+------------
+we'll work with login here
+
+the header compoenents's hyperlink has to be displayed according to whether a user has logged in or not
+so I am creating an AuthService exclusively to keep track of whether a user has logged in or not
+so by referring the AuthService we can decide which hyperlinks have to be displayed in the HeaderComponent
+
+steps to work with route gaurd
+-------------------------------
+1) First create a route guard using ng g g <guardname>
+2) Choose canActivate route gaurd when prompted for
+3) Write the logic for the guard to work
+4) specify the route gaurd for the components for which you want it to work, this is done in app-routing.module.ts
+
+
+
+
+
+
+
+
+
 
 
 
