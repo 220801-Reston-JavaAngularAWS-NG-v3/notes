@@ -137,7 +137,44 @@ steps to work with route gaurd
 4) specify the route gaurd for the components for which you want it to work, this is done in app-routing.module.ts
 
 
+Pipes
+------
+	pipes transform the output on the template
+	- inbuilt pipes
+	- custom pipes
+	refernce - https://angular.io/guide/pipes
 
+summary
+--------
+	- components
+	- services
+	- routing 
+		- look out child routing
+	- directives 
+	     - built in directives
+		structural directives - *ngFor, *ngIf, *ngSwitch
+		attribute directives - ngStyle, ngClass
+		component - @Component
+	     - custom directives
+		- use the @Directive decorator
+	- pipes
+	    - built in pipes
+	    - custom pipes
+	- forms
+	    - template driven forms
+	    - reactive forms
+	- form validation
+	- route gaurds
+	- HttpClient - worked with Observable	
+
+Angular testing
+---------------
+	- i will be creating a new angular project
+	- jasmine and karma
+	- jasmine provides the testing library and karma gives the execution engine
+
+- each 'it' function is a spec/test method here, it corresponds to the @Test annotated method in JUnit
+- 'beforeEach' function is executed before each spec, it corresponds to the @BeforeEach annotated method in JUnit
 
 
 

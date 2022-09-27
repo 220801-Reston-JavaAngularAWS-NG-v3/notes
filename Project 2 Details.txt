@@ -49,9 +49,9 @@ Back-end Application
 
 Front-end Application
 ----------------------
-1)
-2)
-3)
+1) use components, services, directives, forms, pipes, routing , route gaurds and HttpClient
+2) Jasmin/Karma - to unit test the components, we need not test the services. 
+3) make the design look professional/ user friendly / nice stylings
 
 Database
 --------
